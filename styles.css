@@ -112,6 +112,7 @@ border: 2px solid black;
 	left: 10;
 	height: 30%;
 	min-height: 100px;
+	max-height: 200px;
 	width: 70%;
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	background-color: black;
