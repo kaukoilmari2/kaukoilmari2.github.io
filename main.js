@@ -194,24 +194,25 @@ function handleCharacteristicValueChanged(event) {
 			readBuffer += c;
 		}
 	}
+	receive(data);
 }
 
 // Received data handling
 function receive(data) {
 	
-	if (data.indexOf("<") === 0 && data.lastIndexOf(">") == 0) {
-		var tempString = data.slice(1,data.length-2);
-		log(tempString, 'in');
-		var tempData = tempString.split("|");
-		var i;
-		var text = "";
-		for (i = 0; i < tempData.length; i++) {
-			text += tempData[i] + "<br>";
-			log(text, 'in')
-		}
-	} else {
-		log("Unknown format: ", 'in')
+//	if (data.indexOf("<") === 0 && data.lastIndexOf(">") == 0) {
+//		var tempString = data.slice(1,data.length-2);
+//		log(tempString, 'in');
+//		var tempData = tempString.split("|");
+//		var i;
+//		var text = "";
+//		for (i = 0; i < tempData.length; i++) {
+//			text += tempData[i] + "<br>";
+//			log(text, 'in')
+//		}
+//	} else {
+//		log("Unknown format: ", 'in')
 		log(data, 'in');
-	}
+	//}
 }
 
