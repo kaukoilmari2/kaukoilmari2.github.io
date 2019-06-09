@@ -174,27 +174,28 @@ function writeToCharacteristicCache(characteristic, data) {
 
 //Intermediate buffer for incoming data
 
-let readBuffer = '';
+//let readBuffer = '';
 
 // Data receiving
 
 function handleCharacteristicValueChanged(event) {
 	let value = new TextDecoder().decode(event.target.value);
+	log(data, 'in');
 
-	for (let c of value) {
-		if(c === '>') {
-			let data = readBuffer.trim();
-			readBuffer = '';
-
-			if (data) {
-				RTCRtpReceiver(data);
-			}
-		}
-		else {
-			readBuffer += c;
-		}
-	}
-	receive(data);
+//	for (let c of value) {
+//		if(c === '>') {
+//			let data = readBuffer.trim();
+//			readBuffer = '';
+//
+//			if (data) {
+//				RTCRtpReceiver(data);
+//			}
+//		}
+//		else {
+//			readBuffer += c;
+//		}
+//	}
+//	receive(data);
 }
 
 // Received data handling
