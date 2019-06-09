@@ -180,7 +180,7 @@ function writeToCharacteristicCache(characteristic, data) {
 
 function handleCharacteristicValueChanged(event) {
 	let value = new TextDecoder().decode(event.target.value);
-	log(data, 'in');
+	log(value, 'in');
 
 //	for (let c of value) {
 //		if(c === '>') {
@@ -199,7 +199,7 @@ function handleCharacteristicValueChanged(event) {
 }
 
 // Received data handling
-function receive(data) {
+//function receive(data) {
 	
 //	if (data.indexOf("<") === 0 && data.lastIndexOf(">") == 0) {
 //		var tempString = data.slice(1,data.length-2);
@@ -213,7 +213,7 @@ function receive(data) {
 //		}
 //	} else {
 //		log("Unknown format: ", 'in')
-		log(data, 'in');
+//		log(data, 'in');
 	//}
-}
+//}
 
