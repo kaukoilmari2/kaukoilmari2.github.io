@@ -126,7 +126,7 @@ function startNotifications(characteristic) {
 
 function log(data, type = '') {
 	terminalContainer.insertAdjacentHTML('beforeend', '<div' + (type ? ' class="' + type + '"' : '') + '>' + data + '</div>');
-//	terminalContainer.scrollTop = terminalContainer.scrollHeight;
+	terminalContainer.scrollTop = terminalContainer.scrollHeight;
 }
 
 function disconnect() {
@@ -181,6 +181,7 @@ let readBuffer = '';
 
 function handleCharacteristicValueChanged(event) {
 	let value = new TextDecoder().decode(event.target.value);
+	log(value, 'in');
 	for (let c of value) {
 		if(c === '\n') {
 			let data = readBuffer.trim();
