@@ -174,32 +174,30 @@ function writeToCharacteristicCache(characteristic, data) {
 
 //Intermediate buffer for incoming data
 
-//let readBuffer = '';
+let readBuffer = '';
 
 // Data receiving
 
 function handleCharacteristicValueChanged(event) {
 	let value = new TextDecoder().decode(event.target.value);
-	log(value, 'in');
+	for (let c of value) {
+		if(c === '\n') {
+			let data = readBuffer.trim();
+			readBuffer = '';
 
-//	for (let c of value) {
-//		if(c === '>') {
-//			let data = readBuffer.trim();
-//			readBuffer = '';
-//
-//			if (data) {
-//				RTCRtpReceiver(data);
-//			}
-//		}
-//		else {
-//			readBuffer += c;
-//		}
-//	}
-//	receive(data);
+			if (data) {
+				receive(data);
+			}
+		}
+		else {
+			readBuffer += c;
+		}
+	}
+	
 }
 
 // Received data handling
-//function receive(data) {
+function receive(data) {
 	
 //	if (data.indexOf("<") === 0 && data.lastIndexOf(">") == 0) {
 //		var tempString = data.slice(1,data.length-2);
@@ -213,7 +211,7 @@ function handleCharacteristicValueChanged(event) {
 //		}
 //	} else {
 //		log("Unknown format: ", 'in')
-//		log(data, 'in');
+		log(data, 'in');
 	//}
-//}
+}
 
