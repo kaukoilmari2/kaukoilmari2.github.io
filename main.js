@@ -213,7 +213,7 @@ function receive(data) {
 //		}
 //	} else {
 //		log("Unknown format: ", 'in')
-		log(data, 'in');
+		log(data, 'zek');
 	//}
 }
 

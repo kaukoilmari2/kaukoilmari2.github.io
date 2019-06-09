@@ -89,13 +89,13 @@ border: 2px solid black;
 }
 
 #tempUp {
-	border-color: rgb(128, 128, 0)
+	border-color: rgb(128, 128, 0);
 	color: #fff;
 	background-color: rgb(128, 128, 0);
 }
 
 #tempDown {
-	border-color: rgb(0, 128, 128)
+	border-color: rgb(0, 128, 128);
 	color: #fff;
 	background-color: rgb(0, 128, 128);
 }
@@ -128,4 +128,6 @@ border: 2px solid black;
 		color: #F44336; }
 	  .terminal div.in {
 		color: #2196F3; }
+		.terminal div.zek {
+			color: azure; }	
   
