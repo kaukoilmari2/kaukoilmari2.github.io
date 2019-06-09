@@ -126,7 +126,7 @@ function startNotifications(characteristic) {
 
 function log(data, type = '') {
 	terminalContainer.insertAdjacentHTML('beforeend', '<div' + (type ? ' class="' + type + '"' : '') + '>' + data + '</div>');
-	terminalContainer.scrollTop = terminalContainer.scrollHeight;
+//	terminalContainer.scrollTop = terminalContainer.scrollHeight;
 }
 
 function disconnect() {
