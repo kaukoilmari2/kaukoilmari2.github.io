@@ -51,20 +51,72 @@
 </div>
 
 <div id="muuttujat">
-	<p id="connectView">CONNECTED?</p>
-	<p id="powerView">POWER I/O</p>
-	<p id="tempView">realT</p>
-	<p id="humView">realH</p>
-	<p id="setTempView">setT</p>
-	<p id="modeView">MODE</p>
+		<table>
+				<tr>
+				  <td>setT:</td>
+				  <td>	
+					  <p id="setTempView" class="readings">N/A</p>
+				  </td>
+				</tr>
+				<tr>
+				  <td>Mode:</td>
+				  <td>
+						<div id="modeView" class="readings">N/A</div>					  
+				  </td>
+				</tr>
+				<tr>
+				  <td>Power:</td>
+				  <td>	
+					  <div id="powerView" class="readings">N/A</div>
+				  </td>
+				</tr>
+				<tr>
+						<td>Connected:</td>
+						<td>	
+							<div id="connectView" class="readings">NO</div>
+						</td>
+					  </tr>
+			  </table>
+			  
+	<p>
+	</p>
+		
 </div>
 
+<p>
+<div id="statisticsDiv" class="statisticsDiv">
+<canvas id="statistics" height="50" aria-label="statistics" role="img">Statistics</canvas>
+</div>
+</p>
+
+<p>
+	<div id="currentReadings" class="currentReadings">
+		<table>
+			<tr>
+				<td>Temp:</td>
+				<td>
+		<div id="tempView" class="readings">N/A</div>
+	</td>
+	</tr>
+	<tr>
+			<td>Hum:</td>
+			<td>
+					<div id="humView" class="readings">N/A</div>
+				</td>
+	</tr>
+	</table>
+	</div>
+</p>
+
+
 <p></p>
+
 <p>
 <div id="terminal" class="terminal">Terminal</div>
 </p>
-
+<script src="Chart.bundle.js"></script>
  <script src="main.js"></script>
+
 	<script src="companion.js" data-service-worker="sw.js"></script>
 
 </body>
