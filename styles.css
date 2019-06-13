@@ -3,11 +3,11 @@ body {background-color: lightgray;}
 #banneri {
 background-color: rgb(0, 0, 255);
 vertical-align: top;
-height: 10%;
+height: 3em;
 width: 98%;
-max-height: 60px;
+
 text-align: center;
-text-decoration: underline;
+font-size: 0.8em;
 padding: 1% 1% 1% 1%;
 background: lightblue;
 position: static;
@@ -19,7 +19,7 @@ display: inline-block;
 #napit {
 	position: relative;
 	float: left;
-	width: 68%;
+	width: 20em;
 	margin: 1%;
 }
 
@@ -28,17 +28,17 @@ display: inline-block;
 	position: relative;
 	float: right;
 	text-align: right;
-	width: 28%;
+	width: 9em;
 	margin: 1%;
-	font-size: 1.5rem;
+	font-size: 0.8em;
 	font-weight: bold;
 }
 
 .bannerInfo {
 	text-decoration: none;
-	font-size: 0.5rem;
+	font-size: 0.3em;
 	position: relative;
-	bottom: 4rem;
+	bottom: 6em;
 	vertical-align: top;
 	float: right;
 }
@@ -48,8 +48,8 @@ display: inline-block;
 	color: greenyellow;
 	text-align: center;
 	padding: 5px;
-	min-width: 10rem;
-	font-size: 4rem;
+	width: 4em;
+	font-size: 1em;
 }
 
 .currentReadings {
@@ -69,7 +69,7 @@ display: inline-block;
 	padding: 6px 20px;
 	margin: 1%;
 	cursor: pointer;
-	font-size: 1rem;
+	font-size: 1em;
 	font-weight: 500;
 	text-decoration: none;
 	white-space: nowrap;
@@ -92,14 +92,13 @@ display: inline-block;
 
 .isoNappi {
 	padding: 12px 30px;
-	font-size: 1.1rem;
+	font-size: 1.1em;
 	text-transform: uppercase;
 	width: 48%;
 }
 
 .bannerNappi {
 	margin: 1%;
-
 	background-color: darkblue;
 	border: none;
 	color: white;
@@ -110,7 +109,7 @@ display: inline-block;
 	position: relative;
 	display: inline-block;
 	bottom: 20px;
-	font-size: 0.5rem;
+	font-size: 0.3em;
 margin: 1%;
 border: 2px solid black;
 }
@@ -154,8 +153,9 @@ border: 2px solid black;
 .statisticsDiv {
 	display: inline-flex;
 	position: relative;
-	width: 70%;
-	height: 125px;
+	width: 98%;
+	min-height: 100px;
+	height: 30%;
 	padding-bottom: 20px;
 }
 
