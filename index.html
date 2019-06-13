@@ -24,10 +24,18 @@
 <body>
 
 <div id="banneri">
+	
 	<h1>kaukoIlmari v0.2
 	<button class="nappi bannerNappi" id="disconnect" type="button">Disconnect</button>
 	<button class="nappi bannerNappi" id="connect" type="button">Connect</button>
-
+	<table>
+			<tr>
+					<td><div id="bannerName" class="bannerInfo">Connected:</div></td>
+					<td>	
+						<div id="connectView" class="bannerInfo">N/A</div>
+					</td>
+				  </tr>
+		</table>
 </h1>
 </div>
 
@@ -55,7 +63,7 @@
 				<tr>
 				  <td>setT:</td>
 				  <td>	
-					  <p id="setTempView" class="readings">N/A</p>
+					  <div id="setTempView" class="readings">N/A</div>
 				  </td>
 				</tr>
 				<tr>
@@ -70,14 +78,22 @@
 					  <div id="powerView" class="readings">N/A</div>
 				  </td>
 				</tr>
-				<tr>
-						<td>Connected:</td>
-						<td>	
-							<div id="connectView" class="readings">NO</div>
-						</td>
-					  </tr>
-			  </table>
+				
 			  
+						<tr>
+							<td>Temp:</td>
+							<td>
+					<div id="tempView" class="readings currenReadings">N/A</div>
+				</td>
+				</tr>
+				<tr>
+						<td>Hum:</td>
+						<td>
+								<div id="humView" class="readings currenReadings">N/A</div>
+							</td>
+				</tr>
+				</table>
+					  
 	<p>
 	</p>
 		
@@ -85,29 +101,9 @@
 
 <p>
 <div id="statisticsDiv" class="statisticsDiv">
-<canvas id="statistics" height="50" aria-label="statistics" role="img">Statistics</canvas>
+<canvas id="statistics" height="80" aria-label="statistics" role="img">Statistics</canvas>
 </div>
 </p>
-
-<p>
-	<div id="currentReadings" class="currentReadings">
-		<table>
-			<tr>
-				<td>Temp:</td>
-				<td>
-		<div id="tempView" class="readings">N/A</div>
-	</td>
-	</tr>
-	<tr>
-			<td>Hum:</td>
-			<td>
-					<div id="humView" class="readings">N/A</div>
-				</td>
-	</tr>
-	</table>
-	</div>
-</p>
-
 
 <p></p>
 
