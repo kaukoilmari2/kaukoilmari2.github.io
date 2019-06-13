@@ -19,8 +19,11 @@ display: inline-block;
 #napit {
 	position: relative;
 	float: left;
-	width: 20em;
+	min-width: 15em;
+	width: 70%;
 	margin: 1%;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
 }
 
 #muuttujat {
