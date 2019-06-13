@@ -603,12 +603,15 @@ function connectionIdler() {
 		lastDataPacket--;
 	}
 	if (lastDataPacket >= 2) {
+		isConnectedView.style.color = "chartreuse";
 	isConnectedView.innerText = 'YES';
 	}
 	if (lastDataPacket == 1) {
+		isConnectedView.style.color = "yellow";
 		isConnectedView.innerText = '???';
 	}
 	if (lastDataPacket == 0) {
+		isConnectedView.style.color = "red";
 		isConnectedView.innerText = 'NO';
 	}
 	

@@ -68,7 +68,7 @@ display: inline-block;
 
 .nappi {
 	position: relative;
-	float: right;
+	float: left;
 	padding: 6px 20px;
 	margin: 1%;
 	cursor: pointer;
@@ -97,10 +97,18 @@ display: inline-block;
 	padding: 12px 30px;
 	font-size: 1.1em;
 	text-transform: uppercase;
-	width: 48%;
+	width: 45%;
+}
+
+#connectView {
+	background-color: black;
+	color: grey;
+	padding: 3px;
+	margin: 3px;
 }
 
 .bannerNappi {
+	float: right;
 	margin: 1%;
 	background-color: darkblue;
 	border: none;
