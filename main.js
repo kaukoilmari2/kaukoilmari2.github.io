@@ -270,7 +270,7 @@ function send(data) {
 	data += '>';
 
 	writeToCharacteristicCache(characteristicCache, data);
-	log(data, 'out');
+	//log(data, 'out');
 }
 
 function writeToCharacteristicCache(characteristic, data) {
