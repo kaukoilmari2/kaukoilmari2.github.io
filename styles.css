@@ -20,9 +20,9 @@ display: inline-block;
 	
 	position: relative;
 	float: left;
-	width: 60vw;
-	max-height: 70%;
-	margin: 1vh 1vw;
+	width: 53vw;
+	height: 50vh;
+	margin: 1vh 0.1vw;
 	padding-bottom: 1vh;
 }
 
@@ -31,12 +31,13 @@ display: inline-block;
 	position: relative;
 	float: right;
 	text-align: right;
-	width: 25vw;
-	margin: 1vw;
+	width: 35vw;
+	margin: 1vh 0.1vw;
+
 	font-size: 2.2vw;
 	font-weight: bold;
 	max-height: 70%;
-	min-height: 50vh;
+	min-height: 45vh;
 }
 
 .bannerInfo {
@@ -52,11 +53,11 @@ display: inline-block;
 	background-color: black;
 	color: greenyellow;
 	text-align: center;
-	width: 15vw;
-	height: 6vh;
-	font-size: 2.8vmax;
-	padding-top: 0.6rem;
-	padding-bottom: 0.4rem;
+	width: 23vw;
+	height: 5vh;
+	font-size: 4vmax;
+	padding-top: 1vmax;
+	padding-bottom: 2vmax;
 	
 }
 
@@ -100,10 +101,10 @@ display: inline-block;
 
 .isoNappi {
 	padding: 1vh 3vw;
-	font-size: 3vh;
-	margin: 1%;
+	font-size: 1rem;
+	margin: 0.5vh 0.5vw;
 	text-transform: uppercase;
-	width: 28vw;
+	width: 25vw;
 	height: 15vh;
 }
 
