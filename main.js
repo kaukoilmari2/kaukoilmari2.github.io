@@ -579,6 +579,19 @@ function receive(data) {
 	const reversedH = [...H];
 	reversedH.reverse();
 	statisticsBox.data.datasets[1].data = reversedH;
+	
+	//Kellonajat taulukkoon;
+	var d = new Date();
+	var tunnit = d.getHours();
+	var timeLabels = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
+			for(var i = 0; i < 25; i++) {
+		var erotus = (tunnit - i);
+		if (erotus < 0) {
+			erotus += 24;
+		}
+		timeLabels[(24-i)] = erotus;
+	}
+	statisticsBox.config.data.labels = timeLabels;
 
 	statisticsBox.update();
 	lastDataPacket = 4;
