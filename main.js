@@ -152,13 +152,13 @@ function connect() {
 }
 
 function requestBluetoothDevice() {
-	log('Requesting bluetooth device...');
+	log('Etsitään bluetooth-laitteita...');
 
 	return navigator.bluetooth.requestDevice({
 		filters: [{services: [0xFFE0]}],
 	}).
 		then(device => {
-			log('"' + device.name + '" bluetooth device selected');
+			log('"' + device.name + '" valittu');
 			deviceCache = device;
 
 			deviceCache.addEventListener('gattserverdisconnected',
@@ -172,7 +172,7 @@ function handleDisconnection(event) {
 	let device = event.target;
 
 	log('"' + device.name +
-		'" bluetooth device disconnected, trying to reconnect...');
+		'" Yhteys katkesi - yhdistetään uudelleen...');
 
 	connectDeviceAndCacheCharacteristic(device).
 		then(characteristic => startNotifications(characteristic)).
@@ -186,21 +186,21 @@ function connectDeviceAndCacheCharacteristic(device) {
 		return Promise.resolve(characteristicCache);
 	}
 
-	log('Connecting to GATT server...');
+	log('Alustetaan palvelin(GATT)...');
 
 	return device.gatt.connect().
 		then(server => {
-			log('GATT server connected, getting service...');
+			log('Palvelin alustettu, haetaan palvelua(Service)...');
 
 			return server.getPrimaryService(0xFFE0);
 		}).
 		then(service => {
-			log('Service found, getting characteristic...');
+			log('Palvelu löytyi, haetaan ominaisuuksia(Characteristics)...');
 
 			return service.getCharacteristic(0xFFE1);
 		}).
 		then(characteristic => {
-			log('Characteristic found');
+			log('Ominaisuudet löytyivät');
 			characteristicCache = characteristic;
 
 			return characteristicCache;
@@ -208,11 +208,11 @@ function connectDeviceAndCacheCharacteristic(device) {
 }
 	
 function startNotifications(characteristic) {
-	log('Starting notifications...');
+	log('Avataan yhteyttä(Notifications)...');
 
 	return characteristic.startNotifications().
 		then(() => {
-			log('Notifications started');
+			log('Yhteys valmis!');
 
 			characteristic.addEventListener('characteristicvaluechanged',
 				handleCharacteristicValueChanged);		
@@ -235,19 +235,19 @@ function updateValues() {
 
 function disconnect() {
 	if (deviceCache) {
-		log('Disconnecting from "' + deviceCache.name + '" bluetooth device...');
+		log('Katkaistaan yhteyttä "' + deviceCache.name + '"-bluetooth laitteeseen...');
 		deviceCache.removeEventListener('gattserverdisconnected',
 			handleDisconnection);
 
 		if (deviceCache.gatt.connected) {
 			deviceCache.gatt.disconnect();
-			log('"' + deviceCache.name + '" bluetooth device disconnected');
+			log('"' + deviceCache.name + '"-bluetooth laitteen yhteys katkaistu');
 			lastDataPacket = 0;
 			connectionIdler();
 		}
 		else {
 			log('"' + deviceCache.name + 
-			'" bluetooth device is already disconnected');
+			'" bluetooth-laitteen yhteys on jo katkaistu!');
 		}
 	}
 
@@ -547,7 +547,7 @@ function receive(data) {
 								break;
 					
 					default: 
-					log("Unknown: ", 'in');
+					log("Tuntematon formaatti: ", 'in');
 					log(dataArray[0], 'in');
 					break;
 				}
@@ -604,7 +604,7 @@ function receive(data) {
 	lastDataPacket = 4;
 	connectionIdler();
 	} else {
-		log("Unknown format: ", 'in');
+		log("Tuntematon formaatti: ", 'in');
 		log(data, 'zek');
 	}
 }
