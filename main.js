@@ -583,6 +583,13 @@ function receive(data) {
 	//Kellonajat taulukkoon;
 	var d = new Date();
 	var tunnit = d.getHours();
+	var minuutit = d.getMinutes();
+	if (minuutit >= 30) {
+		tunnit++;
+		if (tunnit >= 24) {
+			tunnit = 0;
+		}
+	}
 	var timeLabels = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; 
 			for(var i = 0; i < 25; i++) {
 		var erotus = (tunnit - i);
