@@ -52,8 +52,12 @@ display: inline-block;
 	background-color: black;
 	color: greenyellow;
 	text-align: center;
-	width: 4em;
-	font-size: 2.7vw;
+	width: 15vw;
+	height: 6vh;
+	font-size: 2.8vmax;
+	padding-top: 0.6rem;
+	padding-bottom: 0.4rem;
+	
 }
 
 .currentReadings {
