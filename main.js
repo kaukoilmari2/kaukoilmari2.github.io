@@ -43,6 +43,7 @@ var statisticsBox = new Chart(ctx, {
 	}]
     },
     options: {
+		maintainAspectRatio: false,
 		title: {
             display: false,
             text: 'Last 24h data:'
