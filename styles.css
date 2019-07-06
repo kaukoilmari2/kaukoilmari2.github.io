@@ -15,6 +15,21 @@ display: inline-block;
 
 }
 
+#animationContainer {
+	width: 10vw;
+	height: 10vh;
+	position: absolute;
+	float: left;
+	top: 6vh;
+	left: 0vw;
+	
+}
+
+#animate {
+	max-width: 100%;
+	height: auto;
+	
+}
 
 #napit {
 	
